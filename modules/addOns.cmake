@@ -12,6 +12,7 @@ OF_include_internal_addOn( ofxOpenCv )
 OF_include_internal_addOn( ofxThreadedImageLoader )
 OF_include_internal_addOn( ofxAssimpModelLoader )
 OF_include_internal_addOn( ofxEmscripten )
+OF_include_internal_addOn( ofxPoco )
 
 # --- EXTERNAL
 OF_include_external_addOn( ofxTwistedRibbon )
@@ -29,5 +30,6 @@ OF_include_external_addOn( ofxSoundProcessor )
 OF_include_external_addOn( ofxSyphon )
 OF_include_external_addOn( ofxOscHandShake )
 OF_include_external_addOn( ofxTextAlign )
-
+OF_include_external_addOn( ofxDatGui )
+OF_include_external_addOn( ofxLedMapper )
 
