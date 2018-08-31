@@ -124,8 +124,8 @@ set( OF_CORE_FRAMEWORKS
 
 set(OF_USING_STD_FS 1)
 
-message(STATUS "[POCO] OF_CORE_FRAMEWORKS =")
-FOREACH(header_poco ${OF_CORE_FRAMEWORKS})
-    message(STATUS "head = ${header_poco}")
+message(STATUS "OF_CORE_FRAMEWORKS =")
+FOREACH(framework ${OF_CORE_FRAMEWORKS})
+    message(STATUS "- ${framework}")
 ENDFOREACH()
 
