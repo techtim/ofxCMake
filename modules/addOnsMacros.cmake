@@ -28,8 +28,8 @@ endmacro( OF_include_external_addOn )
 
 # TODO Find also .hpp files
 # ---- Find all include directories
-MACRO( OF_find_header_directories return_list PATH )
-    FILE(GLOB_RECURSE new_list ${PATH}/*.h)
+MACRO( OF_find_header_directories return_list PATH)
+    FILE(GLOB_RECURSE new_list "${PATH}/*.h" "${PATH}/*.hpp")
     SET(dir_list "")
     FOREACH(file_path ${new_list})
         GET_FILENAME_COMPONENT(dir_path ${file_path} PATH)
@@ -38,6 +38,20 @@ MACRO( OF_find_header_directories return_list PATH )
     LIST(REMOVE_DUPLICATES dir_list)
     SET(${return_list} ${dir_list})
 ENDMACRO( OF_find_header_directories )
+
+MACRO( OF_find_header_directories_exclude return_list PATH EXCLUDE_REGEX)
+    OF_find_header_directories( tmp_list ${PATH} )
+    FOREACH(file_path ${tmp_list})
+        if (file_path MATCHES ${EXCLUDE_REGEX})
+            message(STATUS "exclude header ${file_path}")
+        else()
+            SET(return_list ${return_list} ${file_path})
+        endif()
+
+    ENDFOREACH()
+    LIST(REMOVE_DUPLICATES dir_list)
+    SET(${return_list} ${dir_list})
+ENDMACRO( OF_find_header_directories_exclude )
 
 #==================================================================
 

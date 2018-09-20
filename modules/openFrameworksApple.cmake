@@ -124,7 +124,7 @@ set( OF_CORE_FRAMEWORKS
 
 set(OF_USING_STD_FS 1)
 
-message(STATUS "OF_CORE_FRAMEWORKS =")
+message(STATUS "Apple OF_CORE_FRAMEWORKS =")
 FOREACH(framework ${OF_CORE_FRAMEWORKS})
     message(STATUS "- ${framework}")
 ENDFOREACH()

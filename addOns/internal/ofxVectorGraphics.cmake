@@ -2,9 +2,9 @@
 # --- Script to search for all the .cpp files in the chosen folder
 # -----------------------------------------------------------------
 
-file(   GLOB_RECURSE
+file(   GLOB
         OFX_VECTORGRAPHICS_CPP
-        "${OF_DIRECTORY_ABSOLUTE}/addons/ofxVectorGraphics/*.cpp"
+        "${OF_DIRECTORY_ABSOLUTE}/addons/ofxVectorGraphics/src/*.cpp"
         )
 
 # -----------------------------------------------------------------

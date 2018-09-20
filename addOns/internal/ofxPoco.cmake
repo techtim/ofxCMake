@@ -35,11 +35,6 @@ include_directories( "${PATH_ADDON_ABSOLUTE}/libs/openssl/include" )
 # include_directories( ${HEADERS_POCO} )
 include_directories( "${PATH_ADDON_ABSOLUTE}/libs/poco/include" )
 
-message(STATUS "[POCO] HEADERs =")
-FOREACH(header_poco ${HEADERS_SSL})
-    message(STATUS "head = ${header_poco}")
-ENDFOREACH()
-
 # -----------------------------------------------------------------
 # ------------------------------ LIBS  	----------------------------
 # -----------------------------------------------------------------

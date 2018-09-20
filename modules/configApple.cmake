@@ -12,6 +12,12 @@ set_source_files_properties( ${OF_SOURCE_FILES} PROPERTIES COMPILE_FLAGS "-x obj
 set(CMAKE_OSX_ARCHITECTURES x86_64)
 add_compile_options(-Wno-deprecated-declarations)
 
+# To use the bundled libc++ please add the following LDFLAGS:
+#   LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+# For compilers to find llvm you may need to set:
+#   export LDFLAGS="-L/usr/local/opt/llvm/lib"
+#   export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
 # Uncoment when clang support filesystem
 #set( DEFINITIONS "-DOF_USING_STD_FS" )
 
