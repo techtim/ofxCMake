@@ -13,7 +13,9 @@ set( PATH_SOURCE ${OF_DIRECTORY_ABSOLUTE}/addons/${NAME_ADDON}/src )
 # ---------------------------- SOURCE -----------------------------
 # -----------------------------------------------------------------
 
-file( GLOB OFX_ADDON_CPP "${PATH_SOURCE}/*.cpp" )
+file( GLOB OFX_ADDON_CPP 
+		"${PATH_SOURCE}/*.cpp" 
+		"${PATH_SOURCE}/output/*.cpp" )
 
 add_library( ${NAME_ADDON} STATIC ${OFX_ADDON_CPP} )
 
